@@ -16303,6 +16303,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Views/Home/AccessDenied.cshtml",
+      "TargetPath": "Views\\Home\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Views/Home/GetUserInfo.cshtml",
       "TargetPath": "Views\\Home\\GetUserInfo.cshtml",
       "FileKind": "mvc"

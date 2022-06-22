@@ -14,6 +14,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
     // opt.Password.RequireLowercase = false;
     // opt.Password.RequireUppercase = false;
     // opt.Password.RequireNonAlphanumeric = false;
+    opt.Lockout.MaxFailedAccessAttempts = 10;
 }).AddErrorDescriber<CustomErrorDescriber>().AddEntityFrameworkStores<UdemyContext>();
 
 builder.Services.ConfigureApplicationCookie(opt =>
@@ -24,6 +25,7 @@ builder.Services.ConfigureApplicationCookie(opt =>
     opt.Cookie.Name = "Cookie";
     opt.ExpireTimeSpan = TimeSpan.FromDays(25);
     opt.LoginPath = new PathString("/Home/SignIn");
+    opt.AccessDeniedPath = new PathString("/Home/AccessDenied");
 });
 
 builder.Services.AddControllersWithViews();

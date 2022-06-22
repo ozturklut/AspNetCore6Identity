@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Views/Home/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Views/Home/AdminPanel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZG1pblBhbmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

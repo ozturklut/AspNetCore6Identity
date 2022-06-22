@@ -79,15 +79,15 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
-            var signInResult = await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, false);
-
+            var signInResult = await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, true);
+            var user = await _userManager.FindByNameAsync(model.Username);
             if (signInResult.Succeeded)
             {
                 if (!string.IsNullOrWhiteSpace(model.ReturnUrl))
                 {
                     return Redirect(model.ReturnUrl);
                 }
-                var user = await _userManager.FindByNameAsync(model.Username);
+
                 var roles = await _userManager.GetRolesAsync(user);
                 if (roles.Contains("Admin"))
                 {
@@ -99,7 +99,27 @@ public class HomeController : Controller
                 }
 
             }
-            ModelState.AddModelError("", "Kullanıcı adı veya şifre hatalı.");
+            else if (signInResult.IsLockedOut)
+            {
+                var lockOutEnd = await _userManager.GetLockoutEndDateAsync(user);
+
+                ModelState.AddModelError("", $"Hesabınız {(lockOutEnd.Value.UtcDateTime - DateTime.UtcNow).Minutes} dakika askıya alınmıştır.");
+            }
+            else
+            {
+                var message = string.Empty;
+
+                if (user != null)
+                {
+                    var failedCount = await _userManager.GetAccessFailedCountAsync(user);
+                    message += $"{(_signInManager.Options.Lockout.MaxFailedAccessAttempts - failedCount)} kez daha girerseniz hesabınız geçici olarak kilitlenecektir.";
+                }
+                else
+                {
+                    message = "Kullanıcı adı veya şifre yanlış";
+                }
+                ModelState.AddModelError("", message);
+            }
         }
         return View(model);
     }
@@ -131,6 +151,11 @@ public class HomeController : Controller
     {
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index");
+    }
+
+    public IActionResult AccessDenied()
+    {
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
