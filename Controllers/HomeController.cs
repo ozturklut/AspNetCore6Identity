@@ -74,6 +74,7 @@ public class HomeController : Controller
     {
         return View(new UserSignInModel { ReturnUrl = returnUrl });
     }
+
     [HttpPost]
     public async Task<IActionResult> SignIn(UserSignInModel model)
     {
@@ -135,6 +136,7 @@ public class HomeController : Controller
     {
         return View();
     }
+
     [Authorize(Roles = "Member")]
     public IActionResult Panel()
     {
@@ -163,4 +165,5 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
 }

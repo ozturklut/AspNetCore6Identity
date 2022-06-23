@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Udemy.Identity.Context;
 using Udemy.Identity.Entities;
+using Udemy.Identity.Models;
 
 namespace Udemy.Identity.Controllers;
 
@@ -10,11 +11,14 @@ namespace Udemy.Identity.Controllers;
 public class UserController : Controller
 {
     private readonly UserManager<AppUser> _userManager;
+    private readonly RoleManager<AppRole> _roleManager;
     private readonly UdemyContext _context;
-    public UserController(UserManager<AppUser> userManager, UdemyContext context)
+
+    public UserController(UserManager<AppUser> userManager, UdemyContext context, RoleManager<AppRole> roleManager)
     {
         _userManager = userManager;
         _context = context;
+        _roleManager = roleManager;
     }
 
     public IActionResult Index()
@@ -45,5 +49,46 @@ public class UserController : Controller
 
 
         return View(users);
+    }
+
+    public IActionResult Create()
+    {
+        return View(new UserAdminCreateModel());
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(UserAdminCreateModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = new AppUser
+            {
+                Email = model.Email,
+                Gender = model.Gender,
+                UserName = model.UserName,
+            };
+            var result = await _userManager.CreateAsync(user, model.UserName + "123.");
+            if (result.Succeeded)
+            {
+                var memberRole = await _roleManager.FindByNameAsync("Member");
+                if (memberRole == null)
+                {
+                    await _roleManager.CreateAsync(new()
+                    {
+                        Name = "Member",
+                        CreatedTime = DateTime.Now,
+                    });
+                }
+
+                await _userManager.AddToRoleAsync(user, "Member");
+                return RedirectToAction("Index");
+
+            }
+            foreach (var item in result.Errors)
+            {
+                ModelState.AddModelError("", item.Description);
+            }
+        }
+        return View(model);
     }
 }
