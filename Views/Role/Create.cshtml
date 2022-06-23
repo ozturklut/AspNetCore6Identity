@@ -1,0 +1,14 @@
+@model RoleCreateModel
+
+<form asp-action="Create" method="POST" class="p-4 w-75 mx-auto shadow">
+    <div class="mb-3">
+        <label>Rol Adı :</label>
+        <span class="text-danger" asp-validation-for="@Model.Name"></span>
+        <input asp-for="@Model.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Ekle</button>
+    </div>
+    <div class="mt-2 text-danger" asp-validation-summary="ModelOnly">
+    </div>
+</form>

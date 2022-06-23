@@ -7,6 +7,8 @@
             <th>Username</th>
             <th>Gender</th>
             <th>Email</th>
+            <th>Role Info</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +18,12 @@
                 <td>@user.UserName</td>
                 <td>@user.Gender</td>
                 <td>@user.Email</td>
+                <td>
+                    <getUserInfo user-id="@user.Id"></getUserInfo>
+                </td>
+                <td>
+                    <a asp-action="AssignRole" asp-route-id="@user.Id">Rol Ekle</a>
+                </td>
             </tr>
         }
     </tbody>
