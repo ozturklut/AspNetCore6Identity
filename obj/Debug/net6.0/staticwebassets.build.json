@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XSlGCRdZbqM5ASU6GUp7jipmet4hR5b5gMy1803oaFU=",
+  "Hash": "2IK3VUbaeSF2vSlfbWglI63NWPNqDv+MOcJOMmyclfY=",
   "Source": "Udemy.Identity",
   "BasePath": "_content/Udemy.Identity",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/obj/Debug/net6.0/scopedcss/projectbundle/Udemy.Identity.bundle.scp.css"
     },
     {
+      "Identity": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/.DS_Store",
+      "SourceId": "Udemy.Identity",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/",
+      "BasePath": "_content/Udemy.Identity",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
       "Identity": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/css/site.css",
       "SourceId": "Udemy.Identity",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/images/background.svg",
+      "SourceId": "Udemy.Identity",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/",
+      "BasePath": "_content/Udemy.Identity",
+      "RelativePath": "images/background.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/background.svg"
     },
     {
       "Identity": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/wwwroot/js/site.js",

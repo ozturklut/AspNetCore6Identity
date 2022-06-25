@@ -1,18 +1,66 @@
-html {
-  font-size: 14px;
-}
+ @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+ body {
+   font-family: "Varela Round", sans-serif;
+ }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+ .card {
+   width: 400px;
+   max-width: 400px;
+ }
 
-body {
-  margin-bottom: 60px;
-}
+ .background-radial-gradient {
+   min-height: 100vh;
+   background-color: hsl(258, 41%, 15%);
+   background-image: radial-gradient(650px circle at 20% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient(1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+ }
+
+ #radius-shape-1 {
+   height: 220px;
+   width: 220px;
+   top: -60px;
+   left: -130px;
+   background: radial-gradient(#D82148, #D82148);
+   overflow: hidden;
+ }
+
+ #radius-shape-2 {
+   border-radius: 68% 12% 63% 37% / 10% 33% 67% 30%;
+   bottom: -100px;
+   right: -110px;
+   width: 500px;
+   height: 500px;
+   background: radial-gradient(#D82148, #D82148);
+   overflow: hidden;
+ }
+
+ .bg-glass {
+   background-image: url("~/images/background.svg");
+   background-repeat: no-repeat;
+   background-color: rgb(255 255 255 / 0.95);
+   backdrop-filter: saturate(200%) blur(25px);
+ }
+
+ .header-text {
+   font-family: "Montserrat Alternates", sans-serif;
+   font-size: 40px;
+   font-weight: bolder;
+   text-align: center;
+ }
+
+ .btn-orange {
+   background-color: #FF9F29;
+   color: #FFF;
+ }
+
+ .btn-light-blue {
+   background-color: #47B5FF;
+   color: #FFF;
+ }
+
+ @media screen and (max-width: 600px) {
+   .card-body {
+     padding: 20px !important;
+   }
+ }
