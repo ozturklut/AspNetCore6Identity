@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Udemy.Identity.Entities;
-using Udemy.Identity.Models;
+using IdentityApp.Entities;
+using IdentityApp.Models;
 
-namespace Udemy.Identity.Controllers;
+namespace IdentityApp.Controllers;
 
 [Authorize(Roles = "Admin")]
 public class RoleController : Controller

@@ -1,20 +1,20 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Udemy.Identity.Context;
-using Udemy.Identity.Entities;
-using Udemy.Identity.Models;
+using IdentityApp.Context;
+using IdentityApp.Entities;
+using IdentityApp.Models;
 
-namespace Udemy.Identity.Controllers;
+namespace IdentityApp.Controllers;
 
 [Authorize(Roles = "Admin")]
 public class UserController : Controller
 {
     private readonly UserManager<AppUser> _userManager;
     private readonly RoleManager<AppRole> _roleManager;
-    private readonly UdemyContext _context;
+    private readonly IdentityAppContext _context;
 
-    public UserController(UserManager<AppUser> userManager, UdemyContext context, RoleManager<AppRole> roleManager)
+    public UserController(UserManager<AppUser> userManager, IdentityAppContext context, RoleManager<AppRole> roleManager)
     {
         _userManager = userManager;
         _context = context;

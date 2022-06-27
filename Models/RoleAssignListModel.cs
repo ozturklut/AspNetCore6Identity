@@ -1,4 +1,4 @@
-namespace Udemy.Identity.Models;
+namespace IdentityApp.Models;
 
 public class RoleAssignListModel
 {

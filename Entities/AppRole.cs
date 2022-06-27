@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Udemy.Identity.Entities;
+namespace IdentityApp.Entities;
 
 public class AppRole : IdentityRole<int>
 {

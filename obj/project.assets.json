@@ -2682,11 +2682,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Udemy.Identity.csproj",
-      "projectName": "Udemy.Identity",
-      "projectPath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Udemy.Identity.csproj",
+      "projectUniqueName": "/Users/lutfullahozturk/Desktop/Code/dotnet6/IdentityApp/IdentityApp/IdentityApp.csproj",
+      "projectName": "IdentityApp",
+      "projectPath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/IdentityApp/IdentityApp/IdentityApp.csproj",
       "packagesPath": "/Users/lutfullahozturk/.nuget/packages/",
-      "outputPath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/obj/",
+      "outputPath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/IdentityApp/IdentityApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/lutfullahozturk/.nuget/NuGet/NuGet.Config"

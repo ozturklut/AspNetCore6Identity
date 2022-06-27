@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Udemy.Identity.CustomDescriber;
+namespace IdentityApp.CustomDescriber;
 
 public class CustomErrorDescriber : IdentityErrorDescriber
 {

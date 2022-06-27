@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Udemy.Identity.Context;
-using Udemy.Identity.CustomDescriber;
-using Udemy.Identity.Entities;
+using IdentityApp.Context;
+using IdentityApp.CustomDescriber;
+using IdentityApp.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +15,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
     // opt.Password.RequireUppercase = false;
     // opt.Password.RequireNonAlphanumeric = false;
     opt.Lockout.MaxFailedAccessAttempts = 10;
-}).AddErrorDescriber<CustomErrorDescriber>().AddEntityFrameworkStores<UdemyContext>();
+}).AddErrorDescriber<CustomErrorDescriber>().AddEntityFrameworkStores<IdentityAppContext>();
 
 builder.Services.ConfigureApplicationCookie(opt =>
 {
@@ -29,7 +29,7 @@ builder.Services.ConfigureApplicationCookie(opt =>
 });
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<UdemyContext>(opt =>
+builder.Services.AddDbContext<IdentityAppContext>(opt =>
     {
         opt.UseSqlServer("Server=127.0.0.1,1433;Database=IdentityDB;Trust Server Certificate=true; User=sa; Password=842862432156.sql;");
         opt.LogTo(Console.WriteLine, LogLevel.Information);

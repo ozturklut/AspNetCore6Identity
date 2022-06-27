@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Udemy.Identity.Models;
+namespace IdentityApp.Models;
 
 public class UserSignInModel
 {

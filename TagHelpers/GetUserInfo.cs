@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.EntityFrameworkCore;
-using Udemy.Identity.Entities;
+using IdentityApp.Entities;
 
-namespace Udemy.Identity.TagHelpers;
+namespace IdentityApp.TagHelpers;
 
 [HtmlTargetElement("getUserInfo")]
 public class GetUserInfo : TagHelper

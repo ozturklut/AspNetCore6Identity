@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Aho8ibt6WHDyvaPn7vf35MfzZw38jrj5cuqnd5nzvjMVw/1VW/IzkQ1LlyN102QrgEAXT7yXgpb7hpSMQnGzg==",
+  "dgSpecHash": "xYXImocdAYzhuz8m9vUAqSTasJ3Q0M/caYlreEj4FQ1vDBx/Dl6zxjz7eLRoU+ooslljnw8zr6XE/HVdJ4hz7A==",
   "success": true,
-  "projectFilePath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/Udemy.Identity/Udemy.Identity/Udemy.Identity/Udemy.Identity.csproj",
+  "projectFilePath": "/Users/lutfullahozturk/Desktop/Code/dotnet6/IdentityApp/IdentityApp/IdentityApp.csproj",
   "expectedPackageFiles": [
     "/Users/lutfullahozturk/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/lutfullahozturk/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
