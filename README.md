@@ -13,4 +13,4 @@ This project makes use of the following technologies:
 - [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 ## License
-This project is licensed under the [MIT license](./blob/master/LICENSE.txt)
+This project is licensed under the [MIT license](https://github.com/ozturklut/AspNetCore6Identity/blob/master/LICENSE.md)
